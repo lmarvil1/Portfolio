@@ -1,0 +1,168 @@
+/*El estilo general del forms, para estilizar sobre todo el fondo blanco*/
+form {
+    max-width: 600px;
+    margin: 180px auto 50px;
+    background-color: #fff;
+    padding: 60px 40px 40px 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /*Le introducimos una sombra alrededor para que destaque mas sobre el fondo*/
+}
+
+/*Para todos los input de tipo texto (input+label)*/
+.form-input {
+    height: 50px;
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+}
+
+/*Aqui nos centramos unicamente en la parte input del type:text*/
+.form-input input {
+    height: 100%; /*Dentro del espacio que ocupa el input en general (input+label) le decimos que ocupe todo ese espacio*/
+    width: 100%;
+    border-radius: 8px;
+    position: absolute; /*Posición fija y absoluta dentro de su contenedor padre. Hemos tenido que introducirle posicion a su contenedor padre (agrupacion input+label) porque sino esta declaración es respecto al body*/
+    background-color: white;
+    border-color: rgb(0, 100, 107);
+    border-width: 2px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+/*En este caso es la parte label que acompaña al type:text*/
+.form-input label {
+    left: 12px; /*Hemos ido testeando hasta llegar a estos valores. EL label se situa en la esquina superior izquierda de la caja del input. 
+    De este modo no ocupa espacio de más (mas estético) pero no interfiere con la escritura de los datos*/
+    top: 0;
+    color: rgb(0, 100, 107);
+    position: absolute;
+    transform: translateY(-50%);
+    border: 4px solid transparent;
+    font-size: 15px;
+    outline: none;
+    background-color: white; /*Para no superponerse con el borde del input*/
+}
+
+
+/*Definir la posicion de la agrupacion textarea (label+textarea)*/
+.form-mensaje {
+    min-height: 100px;
+    position: relative;
+}
+
+/*Aquí es el mismo porceso que con el input y el label del type:text*/
+.form-mensaje textarea {
+    position: absolute;
+    padding-top: 18px;
+    padding-left: 12px;
+    font-size: 17px;
+    height: 100%;
+    width: 100%;
+    resize: none; /*Para impedir q el usuario pueda cambiarle el tamaño al textarea*/
+    border-radius: 8px;
+    border-width: 2px;
+    outline: none;
+    background-color: white;
+    border-color: rgb(0, 100, 107);
+}
+
+.form-mensaje label {
+    left: 12px;
+    top: -1px;
+    color: rgb(0, 100, 107);
+    position: absolute;
+    transform: translateY(-50%);
+    border: 4px solid transparent;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+/*Para el datalist. El proceso es el mismo que para los anteriores. Primero definimos un estilo global para la agrupacion, y luego para cada elemento (label+input)*/
+#data {
+    display: flex;
+    margin: 20px 0 60px 0;
+    position: relative;
+    padding: 12px 0 12px 0;
+}
+
+#data input {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    position: absolute;
+    background-color: white;
+    border-color: rgb(0, 100, 107);
+    border-width: 2px;
+    padding: 20px 20px 20px 20px;
+    font-size: 16px;
+}
+
+#data label {
+    left: 12px;
+    color: rgb(0, 100, 107);
+    position: absolute;
+    transform: translateY(-50%);
+    border: 4px solid transparent;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: white;
+}
+
+/*Finalmente los botones radio. Definimos un estilo general para la agrupacion de todos los botones+label*/
+#select {
+    display: flex;
+    flex-direction: column;
+    border-color: rgb(0, 100, 107);
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+    position: relative;
+}
+
+/*Ahora definimos el label que es hijo directo de la agrupacion con id select. En este caso es el "titulo" de la agrupacion de radios*/
+#select>label {
+    left: 12px;
+    top: 0;
+    color: rgb(0, 100, 107);
+    position: absolute;
+    transform: translateY(-50%);
+    border: 4px solid transparent;
+    font-size: 15px;
+    outline: none;
+    background-color: white;
+}
+
+/*Damos estilo a los elementos que tienen la clase radios y al elemento div de id conds (el checkbox para aceptar terminos y condiciones)*/
+.radios, #conds {
+    display: flex;
+    justify-content: flex-start;
+    margin: 12px 12px 12px 12px;
+    padding-top: 12px;
+}
+
+.radios input, #conds input {
+    margin-right: 12px;
+}
+
+/*Le damos el estilo al boton de envio del form (input type submit) Tambien añadimos hover para cambiarle el estilo cuando el usuario pasa el raton por encima suyo*/
+#boton {
+    border: none;
+    background-color: rgb(0, 100, 107);
+    border-radius: 90px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+    margin-top: 30px;
+    margin-left: 42%;
+}
+
+#boton:hover {
+    border: none;
+    background-color: #f4f4f4;
+    border-radius: 90px;
+    color: rgb(0, 100, 107);
+    font-weight:bolder;
+}
+

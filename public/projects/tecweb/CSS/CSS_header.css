@@ -1,0 +1,200 @@
+/*Definimos el body del documento, indicamos la fuente que se va a emplear y el color de fondo.
+También hemos añadido un margen en la parte superior para que no se solape con el header*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 130px 0 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #1c2324;
+}
+
+/*Definimos el estilo del header en una caja flexbox*/
+#main-header {
+    display: flex;
+    position: fixed; /*Para que se mantenga arriba del todo*/
+    flex-flow: row nowrap;
+    top: 0; /*Sin margen superior*/
+    width: 100%; /*Se ajusta a toda la ventana de ancho*/
+    height: 100px; 
+    padding: 20px 0px 20px 0px; 
+    background-color: #f4f4f4;  /*Color de fondo inicial del div*/
+    /*Con transition, hacemos que al cambiar de estilos haya una transicion. Por ejemplo, que tarde 1s en cambiar*/
+    transition: height 0.3s ease-in-out, background-color 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    justify-content: space-around;
+    column-gap: 20%;
+    align-items: center; /*Para que el contenido esté en el centro del flexbox (en cuanto a 'cross axis')*/
+    z-index: 1; /*Posicion con respecto a la barra de navegación. Para que se mantenga detras*/
+}
+
+/*Cambiamos y añadimos algunos valores al header cuando hemos bajado un poco en la pagina*/
+#main-header.active {
+    height: 90px;
+    background-color: white;
+    opacity: 85%;
+}
+
+/*Tamaño del logo (tanto en la barra de navegacion como en el header)*/
+.logo {
+    width: 90px;
+    height: 90px;
+}
+
+/*Estilos del texto del encabezado*/
+#texto-header {
+    color: #1c2324;
+    font-size: 40px;
+    font-family: 'fantasy';
+    transition: font-size 0.3s ease-in-out;        
+}
+
+#texto-header.active {
+    font-size: 30px;  /*Cuando se ha hecho scroll el tamaño de la fuente cambia a este*/
+}
+
+/*Para que haya transicion en el logo del encabezado cuando pase de un estilo a otro*/
+#logo-header {
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+#logo-header.active {
+    width: 70px;  /*Cuando se hace scroll el logo cambia de alto y ancho*/
+    height: 70px;
+}
+
+/*Con este id damos estilo el boton del header de "flechita" que se usa para abrir el nav.
+De este modo no afecta al boton dentro del nav*/
+#boton-header {
+    transition: font-size 0.3s ease-in-out;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+#boton-header.active {
+    font-size: 35px;  /*Cuando se hace scroll el boton se hace más pequeño*/
+   
+}
+
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    transform: translateX(-100%); /*Nos permite ocultar a la izquierda la barra de navegacion*/  
+    transition: transform 0.3s ease-in-out;
+    z-index: 3;
+    background-color: #fff;
+    width: 25%;
+    padding: 40px;
+    position: fixed;
+    transition-delay: 0s;
+}
+
+/*Con esto, una vez pulsado el boton del header el aside aparece desde la izquierda (donde estaba oculto)*/
+.menu-lateral.visible {
+    transform: translateX(0);
+    transition-delay: 0.2s;
+}
+
+/*Con este id damos estilo el boton del elemento aside de "cruz" que se usa para cerrar el nav.*/
+#close-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 40px;
+    opacity: 0.3;
+    position: absolute;
+    top: 40px;
+    right: 30px;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list li {
+    margin: 20px 0;
+}
+
+.enlaces {
+    color: #1c2324;
+    font-weight: medium;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+
+/*Para el footer*/
+#footer {
+    background-color: rgb(0, 100, 107);
+    margin-top: 4em;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+    padding: 20px 0 20px 0;
+}
+
+/*Darle estilo a las etiquetas "a" de dentro del footer*/
+#footer a {
+    text-decoration: none;
+    color: #f4f4f4;
+    display: block;
+    margin-top: 5px;
+}
+
+#footer a:hover {
+    text-decoration:underline;
+}
+
+/*Definimos el lado izquierdo del footer, en donde está situado el logo*/
+#izq {
+ padding: 45px 150px 45px 100px;
+ border-right: 1px solid #f4f4f4;
+ align-self: center;
+}
+
+#izq > img {
+    height: 200px;
+    width: 200px;
+}
+
+
+/*Definimos el centro del footer, donde están los enlaces de posible interés*/
+.superior {
+    display: flex;
+    flex-flow: row wrap;
+    width: 400px;
+    margin: 0 7% 20px 5%;
+    justify-content: space-around;
+    column-gap: 20px;
+    color: #f4f4f4;
+}
+
+/*Los iconos de las redes sociales*/
+.iconos {
+    height: 30px;
+    width: 30px;
+}
+
+.inferior {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    color: #f4f4f4;
+    margin: 20px 7% 10px 5%;
+}
+
+.links {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 20px;
+}
+
+.legal {
+    display: flex;
+    align-items: flex-end;
+}
+

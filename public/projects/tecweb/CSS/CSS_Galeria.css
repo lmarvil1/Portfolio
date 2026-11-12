@@ -1,0 +1,153 @@
+/*Con este elemento modificamos la visualización de cada sección*/
+.seccion {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+/*Con este div creamos el elemento titulo para cada seccion de articulos*/
+.titulo_seccion { 
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-top: 100px;
+    
+}
+
+/*Con este elemento creamos la barra separadora, para dividir las distintas secciones*/
+.titulo_seccion::after { 
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background-color: rgb(0, 100, 107);
+    margin-left: 10px;
+}
+
+/*Elimina la decoración por defecto de los enlaces en los títulos y le establecemos el color negro*/
+h3 a {
+    text-decoration: none;
+    color: #1c2324;
+}
+
+/*Cuando el ratón se encuentra encima del título, este cambia de color*/
+h3 a:hover {
+    color: rgb(0, 100, 107);
+}
+
+/*Establecemos la disposición de los elementos para que sea de cuadrícula*/
+.cuadricula {
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
+}
+
+/*Modificamos el aspecto de las imágenes y los vídeos en la cuadrícula*/
+.imagen, .video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition:  transform 0.3s ease-out;
+    
+}
+
+/*Cuando el ratón se encuentra encima de estos, la imagen se hace más grande*/
+.imagen:hover, .video:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in;
+    
+}
+
+/*Más modificaciones visuales para las imágenes*/
+.casa {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/*Para añadir los nombres de cada casa en el grupo de cada imagen*/
+.nombre-casa {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 20px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.473));
+    color: white;
+    font-size: 19px;
+    text-align: center;
+    z-index: 0;
+    border-radius: 8px;
+}
+
+/*Para que cuando se haga click en una casa aparezca esta imagen de fondo*/
+.imagen-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+}
+
+.imagen-fondo.active {
+    display: flex;
+}
+
+/*La visualización de la imagen en grande de la casa*/
+.imagen-grande {
+    width: auto;
+    height: 80%;
+    display: block;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/*El aspecto del botón de cierre*/
+.cerrar-btn {
+    position: absolute;
+    top: 60px;
+    right: 70px;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+/*La visualización de las flechas de navegación*/
+.navegacion-flechas {
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    z-index: 1001;
+}
+
+.flecha-izquierda,
+.flecha-derecha {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    
+}
+
+/*La visualización del contador de imágenes*/
+#contador {
+    position: fixed;
+    bottom: 5%;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: bold;
+    opacity: 90%;
+}

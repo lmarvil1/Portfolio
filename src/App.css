@@ -1,0 +1,2012 @@
+/* ==================================================================== */
+/* 01 · BASE Y ESTILOS COMPARTIDOS */
+/* ==================================================================== */
+
+.portfolio {
+  min-height: 100vh; /* Altura mínima del elemento */
+  background: #faf8ff; /* Color, imagen o degradado de fondo */
+  color: #272238; /* Color del texto o icono */
+}
+
+.btn-primary,
+
+.btn-secondary {
+  padding: 15px 28px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  border-radius: 12px; /* Redondeo de esquinas */
+  font-size: 14px; /* Tamaño de letra o símbolo */
+  font-weight: 600; /* Grosor de letra */
+  text-decoration: none; /* Decoración del enlace */
+  transition: all 0.3s ease; /* Suavidad y duración de cambios */
+}
+
+.btn-primary {
+  background: #a879e8; /* Color, imagen o degradado de fondo */
+  color: white; /* Color del texto o icono */
+  box-shadow: 0 10px 30px rgba(168, 121, 232, 0.25); /* Sombra del elemento */
+}
+
+.btn-primary:hover {
+  background: #9061d2; /* Color, imagen o degradado de fondo */
+  transform: translateY(-3px); /* Desplazamiento, giro o escala */
+}
+
+.btn-secondary {
+  border: 1px solid #d9c6f3; /* Borde del elemento */
+  color: #8155c8; /* Color del texto o icono */
+  background: white; /* Color, imagen o degradado de fondo */
+}
+
+.btn-secondary:hover {
+  background: #f0e7ff; /* Color, imagen o degradado de fondo */
+  transform: translateY(-3px); /* Desplazamiento, giro o escala */
+}
+
+.section-heading {
+  text-align: center; /* Alineación horizontal del texto */
+  margin-bottom: 65px; /* Separación exterior inferior */
+}
+
+.section-label {
+  color: #a879e8; /* Color del texto o icono */
+  font-size: 12px; /* Tamaño de letra o símbolo */
+  font-weight: 700; /* Grosor de letra */
+  letter-spacing: 3px; /* Separación entre letras */
+  margin-bottom: 15px; /* Separación exterior inferior */
+}
+
+.section-heading h2 {
+  font-size: clamp(36px, 4vw, 54px); /* Tamaño de letra o símbolo */
+  font-weight: 800; /* Grosor de letra */
+  color: #292238; /* Color del texto o icono */
+  margin-bottom: 15px; /* Separación exterior inferior */
+}
+
+.section-heading h2 span {
+  color: #a879e8; /* Color del texto o icono */
+}
+
+.section-subtitle {
+  font-size: 16px; /* Tamaño de letra o símbolo */
+  color: #777080; /* Color del texto o icono */
+}
+
+/* ==================================================================== */
+/* 02 · NAVEGACIÓN */
+/* ==================================================================== */
+
+.navbar {
+  width: 100%; /* Anchura del elemento */
+  height: 80px; /* Altura del elemento */
+  padding: 0 8%; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: space-between; /* Distribución en el eje principal */
+  background: rgba(255, 255, 255, 0.75); /* Color, imagen o degradado de fondo */
+  backdrop-filter: blur(15px); /* Desenfoque del fondo tras el elemento */
+  position: fixed; /* Tipo de posicionamiento */
+  top: 0; /* Distancia al borde superior */
+  left: 0; /* Distancia al borde izquierdo */
+  z-index: 100; /* Orden de superposición */
+  border-bottom: 1px solid #eee7fa; /* Borde inferior */
+  box-sizing: border-box; /* Incluye padding y borde en el ancho */
+}
+
+.logo {
+  font-size: 30px; /* Tamaño de letra o símbolo */
+  font-weight: 800; /* Grosor de letra */
+  color: #292238; /* Color del texto o icono */
+  text-decoration: none; /* Decoración del enlace */
+}
+
+.logo span {
+  color: #a879e8; /* Color del texto o icono */
+}
+
+.navbar nav {
+  display: flex; /* Modo de distribución del elemento */
+  gap: 25px; /* Separación entre elementos */
+  align-items: center; /* Alineación en el eje transversal */
+}
+
+.navbar nav a {
+  color: #514960; /* Color del texto o icono */
+  text-decoration: none; /* Decoración del enlace */
+  font-size: 14px; /* Tamaño de letra o símbolo */
+  font-weight: 500; /* Grosor de letra */
+  transition: color 0.3s ease; /* Suavidad y duración de cambios */
+}
+
+.navbar nav a:hover {
+  color: #a879e8; /* Color del texto o icono */
+}
+
+.menu-toggle {
+  display: none; /* Modo de distribución del elemento */
+}
+
+/* ==================================================================== */
+/* 03 · INICIO / PORTADA */
+/* ==================================================================== */
+
+.hero {
+  min-height: 85vh; /* Altura mínima del elemento */
+  padding: 140px 8% 40px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: space-between; /* Distribución en el eje principal */
+  gap: 60px; /* Separación entre elementos */
+  overflow: hidden; /* Controla contenido que sobresale */
+  padding-top: 125px; /* Espacio interior superior */
+}
+
+.hero-content {
+  max-width: 650px; /* Anchura máxima */
+  z-index: 2; /* Orden de superposición */
+  text-align: left; /* Alineación horizontal del texto */
+}
+
+.hero-label {
+  color: #a879e8; /* Color del texto o icono */
+  font-size: 12px; /* Tamaño de letra o símbolo */
+  font-weight: 700; /* Grosor de letra */
+  letter-spacing: 3px; /* Separación entre letras */
+  margin-bottom: 25px; /* Separación exterior inferior */
+}
+
+.hero h1 {
+  font-size: clamp(48px, 6vw, 88px); /* Tamaño de letra o símbolo */
+  font-weight: 800; /* Grosor de letra */
+  line-height: 1.1; /* Altura de línea del texto */
+  margin-bottom: 20px; /* Separación exterior inferior */
+}
+
+.hero h1 span {
+  background: linear-gradient(135deg, #b48be9, #8155c8); /* Color, imagen o degradado de fondo */
+  background-clip: text; /* Limita el fondo a la forma del texto */
+  -webkit-background-clip: text; /* Compatibilidad del fondo recortado */
+  -webkit-text-fill-color: transparent; /* Color de relleno del texto en WebKit */
+}
+
+.hero h2 {
+  font-size: clamp(24px, 2.5vw, 36px); /* Tamaño de letra o símbolo */
+  font-weight: 500; /* Grosor de letra */
+  line-height: 1.4; /* Altura de línea del texto */
+  color: #5b526a; /* Color del texto o icono */
+  margin-bottom: 25px; /* Separación exterior inferior */
+}
+
+.hero-description {
+  font-size: 16px; /* Tamaño de letra o símbolo */
+  line-height: 1.9; /* Altura de línea del texto */
+  color: #777080; /* Color del texto o icono */
+  max-width: 570px; /* Anchura máxima */
+  margin-left: 0; /* Separación exterior izquierda */
+  margin-right: 0; /* Separación exterior derecha */
+}
+
+.hero-buttons {
+  display: flex; /* Modo de distribución del elemento */
+  gap: 18px; /* Separación entre elementos */
+  margin-top: 35px; /* Separación exterior superior */
+  justify-content: flex-start; /* Distribución en el eje principal */
+}
+
+.hero-visual {
+  flex: 1; /* Espacio flexible que ocupa */
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: center; /* Distribución en el eje principal */
+  min-width: 300px; /* Anchura mínima */
+}
+
+.creative-scene {
+  position: relative; /* Tipo de posicionamiento */
+  width: 420px; /* Anchura del elemento */
+  height: 420px; /* Altura del elemento */
+  max-width: 100%; /* Anchura máxima */
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: center; /* Distribución en el eje principal */
+  isolation: isolate; /* Crea un contexto de superposición */
+  transition: transform 0.5s ease; /* Suavidad y duración de cambios */
+}
+
+.creative-scene:hover {
+  transform: scale(1.04); /* Desplazamiento, giro o escala */
+}
+
+.scene-glow {
+  position: absolute; /* Tipo de posicionamiento */
+  width: 320px; /* Anchura del elemento */
+  height: 320px; /* Altura del elemento */
+  border-radius: 50%; /* Redondeo de esquinas */
+  background: radial-gradient(
+    circle,
+    rgba(195, 157, 246, 0.35),
+    rgba(195, 157, 246, 0)
+  ); /* Color, imagen o degradado de fondo */
+  filter: blur(20px); /* Efecto visual o desenfoque */
+}
+
+.orbit {
+  position: absolute; /* Tipo de posicionamiento */
+  border: 1px solid rgba(168, 121, 232, 0.25); /* Borde del elemento */
+  border-radius: 50%; /* Redondeo de esquinas */
+  pointer-events: none; /* Permite o bloquea interacción con el puntero */
+}
+
+.orbit-one {
+  width: 310px; /* Anchura del elemento */
+  height: 310px; /* Altura del elemento */
+  transform: rotate(-25deg) scaleY(0.75); /* Desplazamiento, giro o escala */
+}
+
+.orbit-two {
+  width: 390px; /* Anchura del elemento */
+  height: 390px; /* Altura del elemento */
+  transform: rotate(40deg) scaleY(0.75); /* Desplazamiento, giro o escala */
+}
+
+.creative-core {
+  position: relative; /* Tipo de posicionamiento */
+  width: 245px; /* Anchura del elemento */
+  height: 245px; /* Altura del elemento */
+  border-radius: 50%; /* Redondeo de esquinas */
+  background: linear-gradient(
+    135deg,
+    #eadcff 0%,
+    #c7a6f4 50%,
+    #9d73db 100%
+  ); /* Color, imagen o degradado de fondo */
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: center; /* Distribución en el eje principal */
+  box-shadow: inset -18px -20px 35px rgba(116, 70, 178, 0.15),
+    inset 15px 15px 35px rgba(255, 255, 255, 0.45),
+    0 30px 65px rgba(156, 108, 216, 0.22); /* Sombra del elemento */
+  animation: coreFloat 6s ease-in-out infinite; /* Animación aplicada */
+}
+
+.creative-core::before {
+  content: ""; /* Contenido de un pseudoelemento */
+  position: absolute; /* Tipo de posicionamiento */
+  inset: 12px; /* Distancias a los cuatro bordes */
+  border: 1px solid rgba(255, 255, 255, 0.45); /* Borde del elemento */
+  border-radius: 50%; /* Redondeo de esquinas */
+}
+
+.core-symbol {
+  font-size: 105px; /* Tamaño de letra o símbolo */
+  color: rgba(255, 255, 255, 0.9); /* Color del texto o icono */
+  text-shadow: 0 8px 25px rgba(116, 70, 178, 0.15); /* Sombra del texto */
+}
+
+.floating-label {
+  position: absolute; /* Tipo de posicionamiento */
+  z-index: 3; /* Orden de superposición */
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  gap: 10px; /* Separación entre elementos */
+  padding: 13px 18px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  border: 1px solid rgba(224, 207, 248, 0.9); /* Borde del elemento */
+  border-radius: 14px; /* Redondeo de esquinas */
+  background: rgba(255, 255, 255, 0.9); /* Color, imagen o degradado de fondo */
+  box-shadow: 0 12px 35px rgba(119, 83, 164, 0.12); /* Sombra del elemento */
+  backdrop-filter: blur(12px); /* Desenfoque del fondo tras el elemento */
+  color: #665278; /* Color del texto o icono */
+  font-size: 13px; /* Tamaño de letra o símbolo */
+  font-weight: 700; /* Grosor de letra */
+  white-space: nowrap; /* Control de saltos de línea */
+  transition: transform 0.3s ease,
+
+    box-shadow 0.3s ease; /* Suavidad y duración de cambios */
+}
+
+.floating-label:hover {
+  transform: translateY(-6px) scale(1.05); /* Desplazamiento, giro o escala */
+  box-shadow: 0 18px 40px rgba(119, 83, 164, 0.2); /* Sombra del elemento */
+}
+
+.label-symbol {
+  font-size: 22px; /* Tamaño de letra o símbolo */
+  color: #a879e8; /* Color del texto o icono */
+  font-weight: 800; /* Grosor de letra */
+}
+
+.label-code {
+  top: 55px; /* Distancia al borde superior */
+  left: 0; /* Distancia al borde izquierdo */
+}
+
+.label-design {
+  bottom: 65px; /* Distancia al borde inferior */
+  right: 0; /* Distancia al borde derecho */
+}
+
+.scene-spark {
+  position: absolute; /* Tipo de posicionamiento */
+  color: #bd98ed; /* Color del texto o icono */
+  pointer-events: none; /* Permite o bloquea interacción con el puntero */
+}
+
+.spark-one {
+  top: 35px; /* Distancia al borde superior */
+  right: 65px; /* Distancia al borde derecho */
+  font-size: 28px; /* Tamaño de letra o símbolo */
+}
+
+.spark-two {
+  bottom: 40px; /* Distancia al borde inferior */
+  left: 65px; /* Distancia al borde izquierdo */
+  font-size: 34px; /* Tamaño de letra o símbolo */
+}
+
+.spark-three {
+  top: 50%; /* Distancia al borde superior */
+  right: 5px; /* Distancia al borde derecho */
+  font-size: 18px; /* Tamaño de letra o símbolo */
+}
+
+/* ==================================================================== */
+/* 04 · SOBRE MÍ */
+/* ==================================================================== */
+
+.about {
+  padding: 45px 8%; /* 50px arriba y abajo, 8% a los lados */
+  background: #ffffff; /* Color, imagen o degradado de fondo */
+  scroll-margin-top: 90px; /* Separación al desplazarse a un ancla */
+}
+
+.about-container {
+  max-width: 1300px; /* Anchura máxima */
+  margin: 0 auto; /* Espacio exterior del elemento */
+}
+
+.about .section-heading {
+  margin-bottom: 35px; /* Separación exterior inferior */
+}
+
+.about-content {
+  display: grid; /* Modo de distribución del elemento */
+  grid-template-columns: 1.1fr 1fr; /* Número y tamaño de columnas */
+  gap: 70px; /* Separación entre elementos */
+  align-items: start; /* Alineación en el eje transversal */
+}
+
+.about-text {
+  text-align: left; /* Alineación horizontal del texto */
+}
+
+.about-text h3 {
+  font-size: 30px; /* Tamaño de letra o símbolo */
+  font-weight: 700; /* Grosor de letra */
+  color: #352a47; /* Color del texto o icono */
+  margin-bottom: 25px; /* Separación exterior inferior */
+  line-height: 1.3; /* Altura de línea del texto */
+}
+
+.about-text p {
+  font-size: 15px; /* Tamaño de letra o símbolo */
+  line-height: 1.9; /* Altura de línea del texto */
+  color: #716a7c; /* Color del texto o icono */
+  margin-bottom: 20px; /* Separación exterior inferior */
+}
+
+.about-cards {
+  display: flex; /* Modo de distribución del elemento */
+  flex-direction: column; /* Dirección de los elementos flexibles */
+  gap: 18px; /* Separación entre elementos */
+}
+
+.about-card {
+  background: #faf8ff; /* Color, imagen o degradado de fondo */
+  border: 1px solid #eee6fa; /* Borde del elemento */
+  border-radius: 18px; /* Redondeo de esquinas */
+  padding: 12px 20px; /* 18px arriba y abajo, 25px a los lados */
+  transition: transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease; /* Suavidad y duración de cambios */
+  display: flex;              /* Organiza el contenido */
+  flex-direction: column;     /* Coloca los elementos uno debajo de otro */
+  align-items: center;        /* Centra los elementos horizontalmente */
+  justify-content: center;    /* Agrupa los elementos en el centro */
+  gap: 0;                     /* Elimina separaciones automáticas */
+}
+
+.about-card:hover {
+  transform: translateY(-5px); /* Desplazamiento, giro o escala */
+  box-shadow: 0 15px 40px rgba(168, 121, 232, 0.12); /* Sombra del elemento */
+  border-color: #d4b8f5; /* Color del borde */
+}
+
+.about-card-icon {
+  display: inline-flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: center; /* Distribución en el eje principal */
+  width: 36px; /* Anchura del elemento */
+  height: 36px; /* Altura del elemento */
+  background: #eee3ff; /* Color, imagen o degradado de fondo */
+  border-radius: 12px; /* Redondeo de esquinas */
+  color: #9160d2; /* Color del texto o icono */
+  font-size: 18px; /* Tamaño de letra o símbolo */
+  font-weight: 700; /* Grosor de letra */
+  margin-bottom: 8px; /* Separación exterior inferior */
+}
+
+.about-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #352a47;
+  margin: 0 0 5px 0; /* Sin margen superior y 5px debajo */
+}
+
+.about-card p {
+  font-size: 14px; /* Tamaño de letra o símbolo */
+  line-height: 1.7; /* Altura de línea del texto */
+  color: #777080; /* Color del texto o icono */
+}
+
+/* ==================================================================== */
+/* 05 · PROYECTOS */
+/* ==================================================================== */
+
+.projects {
+  padding: 35px 8% 60px; /* Arriba, laterales y abajo */
+  background: #faf8ff; /* Fondo lila muy claro */
+  scroll-margin-top: 90px; /* Desplazamiento desde navegación */
+}
+
+.projects-container {
+  max-width: 1300px; /* Anchura máxima */
+  margin: 0 auto; /* Espacio exterior del elemento */
+}
+
+.project-filters {
+  display: flex; /* Modo de distribución del elemento */
+  justify-content: center; /* Distribución en el eje principal */
+  flex-wrap: wrap; /* Permite pasar elementos a otra fila */
+  gap: 12px; /* Separación entre elementos */
+  margin-bottom: 35px; /* Separación exterior inferior */
+}
+
+.filter-button {
+  padding: 12px 24px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  border: 1px solid #e4d8f5; /* Borde del elemento */
+  border-radius: 30px; /* Redondeo de esquinas */
+  background: white; /* Color, imagen o degradado de fondo */
+  color: #746781; /* Color del texto o icono */
+  font-size: 14px; /* Tamaño de letra o símbolo */
+  font-weight: 600; /* Grosor de letra */
+  cursor: pointer; /* Forma del cursor */
+  transition: all 0.3s ease; /* Suavidad y duración de cambios */
+}
+
+.filter-button:hover {
+  color: #9061d2; /* Color del texto o icono */
+  border-color: #b994f1; /* Color del borde */
+  background: #f4edff; /* Color, imagen o degradado de fondo */
+}
+
+.filter-button.active {
+  background: #a879e8; /* Color, imagen o degradado de fondo */
+  color: white; /* Color del texto o icono */
+  border-color: #a879e8; /* Color del borde */
+  box-shadow: 0 8px 25px rgba(168, 121, 232, 0.2); /* Sombra del elemento */
+}
+
+.projects-grid {
+  display: grid; /* Modo de distribución del elemento */
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Número y tamaño de columnas */
+  gap: 28px; /* Separación entre elementos */
+  align-items: stretch; /* Alineación en el eje transversal */
+}
+
+.project-card {
+  background: white; /* Color, imagen o degradado de fondo */
+  border: 1px solid #eee7fa; /* Borde del elemento */
+  border-radius: 20px; /* Redondeo de esquinas */
+  overflow: hidden; /* Controla contenido que sobresale */
+  transition: transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease; /* Suavidad y duración de cambios */
+  display: flex; /* Modo de distribución del elemento */
+  text-decoration: none; /* Decoración del enlace */
+  color: inherit; /* Color del texto o icono */
+  flex-direction: column; /* Dirección de los elementos flexibles */
+  height: 100%; /* Altura del elemento */
+}
+
+.project-card:hover {
+  transform: translateY(-8px); /* Desplazamiento, giro o escala */
+  box-shadow: 0 20px 50px rgba(119, 83, 164, 0.13); /* Sombra del elemento */
+  border-color: #d7bdf5; /* Color del borde */
+}
+
+.project-image {
+  height: 110px; /* Altura del elemento */
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: center; /* Distribución en el eje principal */
+  position: relative; /* Tipo de posicionamiento */
+  overflow: hidden; /* Controla contenido que sobresale */
+  flex-shrink: 0; /* Evita o permite que se encoja */
+}
+
+.project-image.software {
+  background: linear-gradient(135deg, #eee4ff, #d3b8f6); /* Color, imagen o degradado de fondo */
+}
+
+.project-image.multimedia {
+  background: linear-gradient(135deg, #f9e1f2, #e7b9e5); /* Color, imagen o degradado de fondo */
+}
+
+.project-image::before {
+  content: ""; /* Contenido de un pseudoelemento */
+  position: absolute; /* Tipo de posicionamiento */
+  width: 230px; /* Anchura del elemento */
+  height: 230px; /* Altura del elemento */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Borde del elemento */
+  border-radius: 50%; /* Redondeo de esquinas */
+  transform: translate(65px, -50px); /* Desplazamiento, giro o escala */
+}
+
+.project-image::after {
+  content: ""; /* Contenido de un pseudoelemento */
+  position: absolute; /* Tipo de posicionamiento */
+  width: 130px; /* Anchura del elemento */
+  height: 130px; /* Altura del elemento */
+  background: rgba(255, 255, 255, 0.15); /* Color, imagen o degradado de fondo */
+  border-radius: 50%; /* Redondeo de esquinas */
+  transform: translate(-110px, 75px); /* Desplazamiento, giro o escala */
+}
+
+.project-icon {
+  width: 52px;
+  height: 52px;
+  color: rgba(255, 255, 255, 0.95);
+  stroke-width: 2;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-icon {
+  transform: scale(1.15) rotate(-5deg); /* Desplazamiento, giro o escala */
+}
+
+.project-info {
+  padding: 22px 26px 24px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  display: flex; /* Modo de distribución del elemento */
+  flex-direction: column; /* Dirección de los elementos flexibles */
+  flex: 1; /* Espacio flexible que ocupa */
+  text-align: left; /* Alineación horizontal del texto */
+}
+
+.project-type {
+  font-size: 10px; /* Tamaño de letra o símbolo */
+  font-weight: 700; /* Grosor de letra */
+  color: #a879e8; /* Color del texto o icono */
+  letter-spacing: 1px; /* Separación entre letras */
+  text-transform: uppercase; /* Transformación a mayúsculas/minúsculas */
+  margin-bottom: 12px; /* Separación exterior inferior */
+  margin: 0 0 8px; /* Espacio exterior del elemento */
+  line-height: 1.5; /* Altura de línea del texto */
+}
+
+.project-info h3 {
+  font-size: 20px; /* Tamaño de letra o símbolo */
+  font-weight: 700; /* Grosor de letra */
+  color: #352a47; /* Color del texto o icono */
+  margin-bottom: 14px; /* Separación exterior inferior */
+  line-height: 1.35; /* Altura de línea del texto */
+  margin: 0 0 10px; /* Espacio exterior del elemento */
+}
+
+.project-description {
+  font-size: 14px; /* Tamaño de letra o símbolo */
+  line-height: 1.65; /* Altura de línea del texto */
+  color: #777080; /* Color del texto o icono */
+  margin-bottom: 22px; /* Separación exterior inferior */
+  margin: 0; /* Espacio exterior del elemento */
+}
+
+.project-technologies {
+  display: flex; /* Modo de distribución del elemento */
+  flex-wrap: wrap; /* Permite pasar elementos a otra fila */
+  gap: 8px; /* Separación entre elementos */
+  justify-content: flex-start; /* Distribución en el eje principal */
+}
+
+.project-technologies span {
+  padding: 7px 11px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  border-radius: 8px; /* Redondeo de esquinas */
+  background: #f3ecff; /* Color, imagen o degradado de fondo */
+  color: #865bbd; /* Color del texto o icono */
+  font-size: 11px; /* Tamaño de letra o símbolo */
+  font-weight: 600; /* Grosor de letra */
+}
+
+.project-card:focus-visible {
+  outline: 3px solid #a879e8; /* Contorno de accesibilidad */
+  outline-offset: 4px; /* Separación del contorno */
+}
+
+.project-more {
+  display: inline-block; /* Modo de distribución del elemento */
+  margin-top: auto; /* Separación exterior superior */
+  color: #9061d2; /* Color del texto o icono */
+  font-size: 13px; /* Tamaño de letra o símbolo */
+  font-weight: 700; /* Grosor de letra */
+  padding-top: 18px; /* Espacio interior superior */
+  align-self: flex-start; /* Alineación individual dentro del contenedor */
+}
+
+.projects .section-heading {
+  margin-bottom: 40px; /* Separación exterior inferior */
+}
+
+/* ==================================================================== */
+/* 06 · TECNOLOGÍAS */
+/* ==================================================================== */
+
+.technologies {
+  padding: 110px 8%; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  background: #ffffff; /* Color, imagen o degradado de fondo */
+  scroll-margin-top: 90px; /* Separación al desplazarse a un ancla */
+  padding-top: 40px; /* Espacio interior superior */
+  padding-bottom: 70px; /* Espacio interior inferior */
+}
+
+.technologies-container {
+  max-width: 1300px; /* Anchura máxima */
+  margin: 0 auto; /* Espacio exterior del elemento */
+}
+
+.technologies-grid {
+  display: grid; /* Modo de distribución del elemento */
+  grid-template-columns: repeat(3, minmax(0, 1fr)); /* Número y tamaño de columnas */
+  gap: 25px; /* Separación entre elementos */
+  align-items: stretch; /* Alineación en el eje transversal */
+}
+
+.technology-card {
+  background: #faf8ff; /* Color, imagen o degradado de fondo */
+  border: 1px solid #eee6fa; /* Borde del elemento */
+  border-radius: 22px; /* Redondeo de esquinas */
+  padding: 10px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  transition: transform 0.3s ease,
+
+    box-shadow 0.3s ease,
+
+    border-color 0.3s ease; /* Suavidad y duración de cambios */
+  height: 100%; /* Altura del elemento */
+  min-height: 0; /* Altura mínima del elemento */
+}
+
+.technology-card:hover {
+  transform: translateY(-7px); /* Desplazamiento, giro o escala */
+  border-color: #d4b8f5; /* Color del borde */
+  box-shadow: 0 20px 45px rgba(168, 121, 232, 0.12); /* Sombra del elemento */
+}
+
+.technology-icon {
+  width: 60px; /* Anchura del elemento */
+  height: 60px; /* Altura del elemento */
+  border-radius: 16px; /* Redondeo de esquinas */
+  background: linear-gradient(135deg, #eee2ff, #ddc5fa); /* Color, imagen o degradado de fondo */
+  color: #865bbd; /* Color del texto o icono */
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: center; /* Distribución en el eje principal */
+  font-size: 29px; /* Tamaño de letra o símbolo */
+  font-weight: 700; /* Grosor de letra */
+  margin-bottom: 25px; /* Separación exterior inferior */
+  margin-left: auto; /* Separación exterior izquierda */
+  margin-right: auto; /* Separación exterior derecha */
+}
+
+.technology-card h3 {
+  font-size: 21px; /* Tamaño de letra o símbolo */
+  font-weight: 700; /* Grosor de letra */
+  color: #352a47; /* Color del texto o icono */
+  margin-bottom: 22px; /* Separación exterior inferior */
+}
+
+.technology-tags {
+  display: flex; /* Modo de distribución del elemento */
+  flex-wrap: wrap; /* Permite pasar elementos a otra fila */
+  gap: 10px; /* Separación entre elementos */
+}
+
+.technology-tags span {
+  padding: 10px 15px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  border-radius: 10px; /* Redondeo de esquinas */
+  background: white; /* Color, imagen o degradado de fondo */
+  border: 1px solid #eee6fa; /* Borde del elemento */
+  color: #746781; /* Color del texto o icono */
+  font-size: 13px; /* Tamaño de letra o símbolo */
+  font-weight: 500; /* Grosor de letra */
+  transition: all 0.3s ease; /* Suavidad y duración de cambios */
+}
+
+.technology-tags span:hover {
+  background: #eee3ff; /* Color, imagen o degradado de fondo */
+  border-color: #d4b8f5; /* Color del borde */
+  color: #865bbd; /* Color del texto o icono */
+  transform: translateY(-2px); /* Desplazamiento, giro o escala */
+}
+
+.technologies .section-heading {
+  margin-bottom: 40px; /* Separación exterior inferior */
+}
+
+/* ==================================================================== */
+/* 07 · CONTACTO */
+/* ==================================================================== */
+
+.contact {
+  padding: 35px 8%; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  background: linear-gradient(
+
+    135deg,
+
+    #faf8ff 0%,
+
+    #f0e5ff 100%
+
+  ); /* Color, imagen o degradado de fondo */
+  text-align: center; /* Alineación horizontal del texto */
+  scroll-margin-top: 90px; /* Separación al desplazarse a un ancla */
+  min-height: 0; /* Altura mínima del elemento */
+  height: auto; /* Altura del elemento */
+}
+
+.contact-container {
+  max-width: 900px; /* Anchura máxima */
+  margin: 0 auto; /* Espacio exterior del elemento */
+}
+
+.contact h2 {
+  font-size: clamp(38px, 5vw, 65px); /* Tamaño de letra o símbolo */
+  font-weight: 800; /* Grosor de letra */
+  color: #292238; /* Color del texto o icono */
+  line-height: 1.2; /* Altura de línea del texto */
+  margin: 0 0 18px; /* Espacio exterior del elemento */
+}
+
+.contact h2 span {
+  color: #a879e8; /* Color del texto o icono */
+}
+
+.contact-description {
+  font-size: 17px; /* Tamaño de letra o símbolo */
+  line-height: 1.6; /* Altura de línea del texto */
+  color: #716a7c; /* Color del texto o icono */
+  max-width: 620px; /* Anchura máxima */
+  margin: 0 auto 25px; /* Espacio exterior del elemento */
+}
+
+.contact-actions {
+  display: flex; /* Modo de distribución del elemento */
+  justify-content: center; /* Distribución en el eje principal */
+  margin-top: 40px; /* Separación exterior superior */
+  margin: 0 0 22px; /* Espacio exterior del elemento */
+}
+
+.contact-socials {
+  display: flex; /* Modo de distribución del elemento */
+  justify-content: center; /* Distribución en el eje principal */
+  flex-wrap: wrap; /* Permite pasar elementos a otra fila */
+  gap: 18px; /* Separación entre elementos */
+  margin-top: 40px; /* Separación exterior superior */
+  margin: 0; /* Espacio exterior del elemento */
+}
+
+.contact-social {
+  display: inline-flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  gap: 10px; /* Separación entre elementos */
+  padding: 12px 22px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  background: rgba(255, 255, 255, 0.8); /* Color, imagen o degradado de fondo */
+  border: 1px solid #e4d5f7; /* Borde del elemento */
+  border-radius: 12px; /* Redondeo de esquinas */
+  color: #675477; /* Color del texto o icono */
+  font-size: 14px; /* Tamaño de letra o símbolo */
+  font-weight: 600; /* Grosor de letra */
+  text-decoration: none; /* Decoración del enlace */
+  transition: all 0.3s ease; /* Suavidad y duración de cambios */
+}
+
+.contact-social span {
+  font-size: 17px; /* Tamaño de letra o símbolo */
+  font-weight: 800; /* Grosor de letra */
+  color: #956acb; /* Color del texto o icono */
+}
+
+.contact-social:hover {
+  transform: translateY(-4px); /* Desplazamiento, giro o escala */
+  background: white; /* Color, imagen o degradado de fondo */
+  border-color: #b994f1; /* Color del borde */
+  box-shadow: 0 10px 25px rgba(168, 121, 232, 0.15); /* Sombra del elemento */
+}
+
+.contact .section-label {
+  margin-bottom: 12px; /* Separación exterior inferior */
+}
+
+/* ==================================================================== */
+/* 08 · PIE DE PÁGINA */
+/* ==================================================================== */
+
+.footer {
+  background: #ffffff; /* Color, imagen o degradado de fondo */
+  padding: 30px 8%; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  display: flex; /* Modo de distribución del elemento */
+  justify-content: space-between; /* Distribución en el eje principal */
+  align-items: center; /* Alineación en el eje transversal */
+  gap: 20px; /* Separación entre elementos */
+  border-top: 1px solid #eee7fa; /* Borde superior */
+}
+
+.footer p {
+  color: #8b8295; /* Color del texto o icono */
+  font-size: 13px; /* Tamaño de letra o símbolo */
+}
+
+.footer a {
+  color: #956acb; /* Color del texto o icono */
+  font-size: 13px; /* Tamaño de letra o símbolo */
+  font-weight: 600; /* Grosor de letra */
+  text-decoration: none; /* Decoración del enlace */
+}
+
+.footer a:hover {
+  color: #7042b3; /* Color del texto o icono */
+}
+
+/* ==================================================================== */
+/* 09 · DETALLE DE PROYECTOS */
+/* ==================================================================== */
+
+.project-detail {
+  min-height: 100vh; /* Altura mínima del elemento */
+  padding: 115px 8% 45px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  background: #faf8ff; /* Color, imagen o degradado de fondo */
+}
+
+.detail-container {
+  max-width: 1100px; /* Anchura máxima */
+  margin: 0 auto; /* Espacio exterior del elemento */
+}
+
+.detail-back {
+  display: inline-block; /* Modo de distribución del elemento */
+  margin-bottom: 20px; /* Separación exterior inferior */
+  color: #9061d2; /* Color del texto o icono */
+  font-size: 14px; /* Tamaño de letra o símbolo */
+  font-weight: 600; /* Grosor de letra */
+  text-decoration: none; /* Decoración del enlace */
+}
+
+.detail-back:hover {
+  color: #7042b3; /* Color del texto o icono */
+}
+
+.detail-header {
+  margin-bottom: 25px; /* Separación exterior inferior */
+  text-align: center; /* Alineación horizontal del texto */
+}
+
+.detail-header h1 {
+  font-size: clamp(34px, 4vw, 52px); /* Tamaño de letra o símbolo */
+  line-height: 1.15; /* Altura de línea del texto */
+  color: #292238; /* Color del texto o icono */
+  margin: 10px 0 15px; /* Espacio exterior del elemento */
+}
+
+.detail-intro {
+  max-width: 780px; /* Anchura máxima */
+  font-size: 17px; /* Tamaño de letra o símbolo */
+  line-height: 1.6; /* Altura de línea del texto */
+  color: #716a7c; /* Color del texto o icono */
+  margin-bottom: 15px; /* Separación exterior inferior */
+}
+
+.detail-gallery {
+  min-height: 350px; /* Altura mínima del elemento */
+  border-radius: 24px; /* Redondeo de esquinas */
+  margin-bottom: 35px; /* Separación exterior inferior */
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: center; /* Distribución en el eje principal */
+  overflow: hidden; /* Controla contenido que sobresale */
+}
+
+.detail-gallery.software {
+  background: linear-gradient(135deg, #eee4ff, #d3b8f6); /* Color, imagen o degradado de fondo */
+}
+
+.detail-gallery.multimedia {
+  background: linear-gradient(135deg, #f9e1f2, #e7b9e5); /* Color, imagen o degradado de fondo */
+}
+
+.detail-gallery-placeholder {
+  text-align: center; /* Alineación horizontal del texto */
+  padding: 30px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+}
+
+.detail-gallery-icon {
+  display: block; /* Modo de distribución del elemento */
+  color: rgba(255, 255, 255, 0.9); /* Color del texto o icono */
+  font-size: 90px; /* Tamaño de letra o símbolo */
+  margin-bottom: 15px; /* Separación exterior inferior */
+}
+
+.detail-gallery-placeholder p {
+  color: #76539c; /* Color del texto o icono */
+  font-size: 14px; /* Tamaño de letra o símbolo */
+  font-weight: 600; /* Grosor de letra */
+}
+
+.detail-summary-grid {
+  display: grid; /* Modo de distribución del elemento */
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* Número y tamaño de columnas */
+  gap: 18px; /* Separación entre elementos */
+  margin-bottom: 30px; /* Separación exterior inferior */
+}
+
+.detail-summary-card {
+  background: white; /* Color, imagen o degradado de fondo */
+  border: 1px solid #eee7fa; /* Borde del elemento */
+  border-radius: 20px; /* Redondeo de esquinas */
+  padding: 24px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+}
+
+.detail-card-icon {
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: center; /* Distribución en el eje principal */
+  width: 40px; /* Anchura del elemento */
+  height: 40px; /* Altura del elemento */
+  border-radius: 13px; /* Redondeo de esquinas */
+  background: #f0e7ff; /* Color, imagen o degradado de fondo */
+  color: #9061d2; /* Color del texto o icono */
+  font-size: 26px; /* Tamaño de letra o símbolo */
+  margin-bottom: 12px; /* Separación exterior inferior */
+}
+
+.detail-summary-card h2 {
+  font-size: 22px; /* Tamaño de letra o símbolo */
+  color: #352a47; /* Color del texto o icono */
+  margin-bottom: 10px; /* Separación exterior inferior */
+}
+
+.detail-summary-card p {
+  color: #716a7c; /* Color del texto o icono */
+  font-size: 15px; /* Tamaño de letra o símbolo */
+  line-height: 1.6; /* Altura de línea del texto */
+}
+
+.detail-section {
+  margin-bottom: 45px; /* Separación exterior inferior */
+}
+
+.detail-section-heading {
+  margin-bottom: 22px; /* Separación exterior inferior */
+}
+
+.detail-section-heading h2 {
+  font-size: clamp(28px, 4vw, 38px); /* Tamaño de letra o símbolo */
+  color: #292238; /* Color del texto o icono */
+  line-height: 1.3; /* Altura de línea del texto */
+}
+
+.detail-section-heading h2 span {
+  color: #a879e8; /* Color del texto o icono */
+}
+
+.detail-features-grid {
+  display: grid; /* Modo de distribución del elemento */
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* Número y tamaño de columnas */
+  gap: 12px; /* Separación entre elementos */
+}
+
+.detail-feature-card {
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  gap: 15px; /* Separación entre elementos */
+  background: white; /* Color, imagen o degradado de fondo */
+  border: 1px solid #eee7fa; /* Borde del elemento */
+  border-radius: 16px; /* Redondeo de esquinas */
+  padding: 16px 20px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Suavidad y duración de cambios */
+}
+
+.detail-feature-card:hover {
+  border-color: #d4b8f5; /* Color del borde */
+  box-shadow: 0 10px 30px rgba(168, 121, 232, 0.08); /* Sombra del elemento */
+}
+
+.detail-feature-number {
+  color: #b994e9; /* Color del texto o icono */
+  font-size: 22px; /* Tamaño de letra o símbolo */
+  font-weight: 800; /* Grosor de letra */
+  flex-shrink: 0; /* Evita o permite que se encoja */
+}
+
+.detail-feature-card p {
+  color: #665d72; /* Color del texto o icono */
+  font-size: 14px; /* Tamaño de letra o símbolo */
+  line-height: 1.6; /* Altura de línea del texto */
+}
+
+.detail-tech-card {
+  display: flex; /* Modo de distribución del elemento */
+  flex-wrap: wrap; /* Permite pasar elementos a otra fila */
+  gap: 10px; /* Separación entre elementos */
+  padding: 22px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  background: white; /* Color, imagen o degradado de fondo */
+  border: 1px solid #eee7fa; /* Borde del elemento */
+  border-radius: 20px; /* Redondeo de esquinas */
+}
+
+.detail-tech-card span {
+  padding: 9px 14px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  background: #f3ecff; /* Color, imagen o degradado de fondo */
+  border: 1px solid #e8d9fa; /* Borde del elemento */
+  border-radius: 10px; /* Redondeo de esquinas */
+  color: #865bbd; /* Color del texto o icono */
+  font-size: 14px; /* Tamaño de letra o símbolo */
+  font-weight: 600; /* Grosor de letra */
+}
+
+.detail-bottom {
+  padding-top: 20px; /* Espacio interior superior */
+  border-top: 1px solid #eee7fa; /* Borde superior */
+}
+
+.detail-header .detail-intro {
+  max-width: 1000px; /* Anchura máxima */
+  margin-left: auto; /* Separación exterior izquierda */
+  margin-right: auto; /* Separación exterior derecha */
+  text-align: center; /* Alineación horizontal del texto */
+}
+
+.detail-pending-image {
+  display: flex; /* Modo de distribución del elemento */
+  flex-direction: column; /* Dirección de los elementos flexibles */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: center; /* Distribución en el eje principal */
+  gap: 12px; /* Separación entre elementos */
+  min-height: 210px; /* Altura mínima del elemento */
+  background: linear-gradient(135deg, #f7f2ff, #eee5fa); /* Color, imagen o degradado de fondo */
+  color: #786b90; /* Color del texto o icono */
+}
+
+.detail-pending-icon {
+  font-size: 38px; /* Tamaño de letra o símbolo */
+  color: #a58acb; /* Color del texto o icono */
+}
+
+.detail-pending-image p {
+  margin: 0; /* Espacio exterior del elemento */
+  font-size: 0.9rem; /* Tamaño de letra o símbolo */
+}
+
+/* Tarjetas de objetivo y descripción: icono y título alineados. */
+.detail-summary-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 28px 32px;
+  text-align: left;
+  gap: 0;
+}
+
+.detail-summary-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.detail-summary-heading .detail-card-icon {
+  flex-shrink: 0;
+  margin: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.detail-summary-heading h2 {
+  margin: 0;
+  text-align: left;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.detail-summary-card > p {
+  margin: 0;
+  text-align: left;
+  line-height: 1.7;
+}
+
+/* Tecnologías: etiquetas centradas, sin tarjeta exterior. */
+.detail-technologies {
+  text-align: center;
+}
+
+.detail-technologies-list,
+.detail-tech-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.detail-technologies-list span,
+.detail-tech-card span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  background: #f1e8ff;
+  color: #8655c5;
+  border: 1px solid #e6d5ff;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* ==================================================================== */
+/* 10 · GALERÍA Y VISOR */
+/* ==================================================================== */
+
+.detail-images-grid {
+  display: grid; /* Modo de distribución del elemento */
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* Número y tamaño de columnas */
+  gap: 15px; /* Separación entre elementos */
+}
+
+.detail-image-card {
+  min-width: 0; /* Anchura mínima */
+  padding: 12px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  background: #ffffff; /* Color, imagen o degradado de fondo */
+  border: 1px solid #e9e2f0; /* Borde del elemento */
+  border-radius: 20px; /* Redondeo de esquinas */
+  cursor: pointer; /* Forma del cursor */
+  text-align: left; /* Alineación horizontal del texto */
+  font: inherit; /* Tipografía heredada */
+  transition: transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease; /* Suavidad y duración de cambios */
+}
+
+.detail-image-card:hover {
+  transform: translateY(-5px); /* Desplazamiento, giro o escala */
+  box-shadow: 0 12px 30px rgba(90, 65, 130, 0.1); /* Sombra del elemento */
+  border-color: #c9b7e6; /* Color del borde */
+}
+
+.detail-image-wrapper {
+  height: 220px; /* Altura del elemento */
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: center; /* Distribución en el eje principal */
+  overflow: hidden; /* Controla contenido que sobresale */
+  background: #faf7fc; /* Color, imagen o degradado de fondo */
+  border-radius: 14px; /* Redondeo de esquinas */
+}
+
+.detail-image-wrapper img {
+  max-width: 100%; /* Anchura máxima */
+  max-height: 100%; /* Altura máxima permitida */
+  object-fit: contain; /* Cómo encaja una imagen o vídeo */
+  display: block; /* Modo de distribución del elemento */
+  width: auto; /* Anchura del elemento */
+  height: auto; /* Altura del elemento */
+}
+
+.detail-image-info {
+  display: flex; /* Modo de distribución del elemento */
+  flex-direction: column; /* Dirección de los elementos flexibles */
+  gap: 5px; /* Separación entre elementos */
+  padding-top: 10px; /* Espacio interior superior */
+}
+
+.detail-image-info span {
+  color: #9b88b4; /* Color del texto o icono */
+  font-size: 12px; /* Tamaño de letra o símbolo */
+  font-weight: 600; /* Grosor de letra */
+}
+
+.detail-image-info h3 {
+  margin: 0; /* Espacio exterior del elemento */
+  color: #292333; /* Color del texto o icono */
+  font-size: 14px; /* Tamaño de letra o símbolo */
+  font-weight: 600; /* Grosor de letra */
+  line-height: 1.4; /* Altura de línea del texto */
+}
+
+.detail-lightbox {
+  position: fixed; /* Tipo de posicionamiento */
+  inset: 0; /* Distancias a los cuatro bordes */
+  z-index: 9999; /* Orden de superposición */
+  display: flex; /* Modo de distribución del elemento */
+  flex-direction: column; /* Dirección de los elementos flexibles */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: center; /* Distribución en el eje principal */
+  gap: 16px; /* Separación entre elementos */
+  padding: 40px 70px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  background: rgba(20, 15, 30, 0.94); /* Color, imagen o degradado de fondo */
+  cursor: zoom-out; /* Forma del cursor */
+}
+
+.detail-lightbox img {
+  max-width: 100%; /* Anchura máxima */
+  max-height: 78vh; /* Altura máxima permitida */
+  object-fit: contain; /* Cómo encaja una imagen o vídeo */
+  border-radius: 10px; /* Redondeo de esquinas */
+  cursor: default; /* Forma del cursor */
+  display: block; /* Modo de distribución del elemento */
+  width: auto; /* Anchura del elemento */
+  height: auto; /* Altura del elemento */
+}
+
+.detail-lightbox p {
+  margin: 0; /* Espacio exterior del elemento */
+  color: white; /* Color del texto o icono */
+  font-size: 15px; /* Tamaño de letra o símbolo */
+}
+
+.detail-lightbox-close {
+  position: absolute; /* Tipo de posicionamiento */
+  top: 18px; /* Distancia al borde superior */
+  right: 28px; /* Distancia al borde derecho */
+  border: none; /* Borde del elemento */
+  background: transparent; /* Color, imagen o degradado de fondo */
+  color: #ffffff; /* Color del texto o icono */
+  font-size: 38px; /* Tamaño de letra o símbolo */
+  cursor: pointer; /* Forma del cursor */
+  z-index: 2; /* Orden de superposición */
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: center; /* Distribución en el eje principal */
+  width: 44px; /* Anchura del elemento */
+  height: 44px; /* Altura del elemento */
+  padding: 0; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  line-height: 1; /* Altura de línea del texto */
+}
+
+.detail-image-card:focus-visible {
+  outline: 3px solid #a58ad3; /* Contorno de accesibilidad */
+  outline-offset: 3px; /* Separación del contorno */
+}
+
+.detail-lightbox-arrow {
+  position: absolute; /* Tipo de posicionamiento */
+  top: 50%; /* Distancia al borde superior */
+  z-index: 2; /* Orden de superposición */
+  display: flex; /* Modo de distribución del elemento */
+  align-items: center; /* Alineación en el eje transversal */
+  justify-content: center; /* Distribución en el eje principal */
+  width: 48px; /* Anchura del elemento */
+  height: 48px; /* Altura del elemento */
+  padding: 0; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  transform: translateY(-50%); /* Desplazamiento, giro o escala */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Borde del elemento */
+  border-radius: 50%; /* Redondeo de esquinas */
+  background: rgba(255, 255, 255, 0.12); /* Color, imagen o degradado de fondo */
+  color: #ffffff; /* Color del texto o icono */
+  font-size: 36px; /* Tamaño de letra o símbolo */
+  line-height: 1; /* Altura de línea del texto */
+  cursor: pointer; /* Forma del cursor */
+  transition: background 0.2s ease; /* Suavidad y duración de cambios */
+}
+
+.detail-lightbox-arrow:hover {
+  background: rgba(255, 255, 255, 0.25); /* Color, imagen o degradado de fondo */
+}
+
+.detail-lightbox-arrow.previous {
+  left: 18px; /* Distancia al borde izquierdo */
+}
+
+.detail-lightbox-arrow.next {
+  right: 18px; /* Distancia al borde derecho */
+}
+
+.detail-lightbox-caption {
+  display: flex; /* Modo de distribución del elemento */
+  flex-direction: column; /* Dirección de los elementos flexibles */
+  align-items: center; /* Alineación en el eje transversal */
+  gap: 4px; /* Separación entre elementos */
+  color: #ffffff; /* Color del texto o icono */
+  text-align: center; /* Alineación horizontal del texto */
+}
+
+.detail-lightbox-caption p {
+  margin: 0; /* Espacio exterior del elemento */
+  font-size: 15px; /* Tamaño de letra o símbolo */
+  font-weight: 500; /* Grosor de letra */
+}
+
+.detail-lightbox-caption span {
+  color: #c9bdd9; /* Color del texto o icono */
+  font-size: 12px; /* Tamaño de letra o símbolo */
+}
+
+/* ==================================================================== */
+/* 11 · PRÁCTICAS AUDIOVISUALES */
+/* ==================================================================== */
+
+/* Tarjetas: texto a la izquierda y vídeo a la derecha. */
+.detail-practices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px; /* Separación entre prácticas */
+}
+
+.detail-practice-card {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr; /* Texto / vídeo */
+  gap: 32px;
+  align-items: center;
+  padding: 32px;
+  border: 1px solid #e9e2f2;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+/* El título y la descripción se agrupan arriba, sin huecos grandes. */
+.detail-practice-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0;
+  text-align: left;
+}
+
+/* PRÁCTICA X y nombre de la práctica en la misma línea. */
+.detail-practice-content .practice-heading-inline {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 3px;
+  margin: 0 0 24px;
+  text-align: left;
+}
+
+.detail-practice-content .practice-heading-inline span,
+.detail-practice-content .practice-heading-inline h3 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  color: #a879e8;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.detail-practice-content .practice-heading-inline h3::before,
+.detail-practice-content .practice-heading-inline h3::after {
+  content: none; /* Evita puntos o separadores duplicados */
+}
+
+.detail-practice-content > p:last-child {
+  margin: 2px 0 0; /* Espacio final entre encabezado y descripción */
+  color: #686174;
+  line-height: 1.8;
+  text-align: left;
+}
+
+/* Contenedor y reproductor de vídeo. */
+.detail-practice-media {
+  width: 100%;
+  min-width: 0;
+}
+
+.detail-practice-media video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: #392064;
+  border-radius: 16px;
+}
+
+.practice-video-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 22px;
+}
+
+.practice-video-wrapper video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Antes de reproducir, la portada no recibe clics directamente. */
+.practice-video-wrapper:not(.is-playing) video {
+  pointer-events: none;
+}
+
+.practice-video-wrapper:not(.is-playing) video::-webkit-media-controls {
+  display: none !important;
+}
+
+/* Botón de reproducción centrado y pequeño. */
+.practice-video-wrapper .practice-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0 0 0 3px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.94);
+  color: #9865d8;
+  font-size: 19px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.practice-video-wrapper .practice-play-button:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: #ffffff;
+}
+
+.practice-video-wrapper.is-playing .practice-play-button {
+  display: none; /* Desaparece mientras se reproduce */
+}
+
+/* Recuadro de sustitución cuando no hay vídeo. */
+.detail-practice-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f2eafb, #e6d9f5);
+  color: #79658f;
+}
+
+.detail-practice-placeholder span {
+  font-size: 42px;
+  color: #9875c2;
+}
+
+.detail-practice-placeholder p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* ==================================================================== */
+/* 12 · ANIMACIONES Y ACCESIBILIDAD */
+/* ==================================================================== */
+
+/* Animación coreFloat: movimiento del elemento. */
+@keyframes coreFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* ==================================================================== */
+/* 13 · ADAPTACIÓN RESPONSIVE (TABLET Y MÓVIL) */
+/* ==================================================================== */
+/* Estos estilos sustituyen a los anteriores cuando se cumple el ancho indicado. */
+
+/* Pantallas: (max-width: 1100px) */
+@media (max-width: 1100px) {
+  /* 03 · INICIO / PORTADA */
+  .creative-scene {
+    width: 340px; /* Anchura del elemento */
+    height: 340px; /* Altura del elemento */
+  }
+
+  .creative-core {
+    width: 200px; /* Anchura del elemento */
+    height: 200px; /* Altura del elemento */
+  }
+
+  .core-symbol {
+    font-size: 85px; /* Tamaño de letra o símbolo */
+  }
+
+  .orbit-one {
+    width: 255px; /* Anchura del elemento */
+    height: 255px; /* Altura del elemento */
+  }
+
+  .orbit-two {
+    width: 325px; /* Anchura del elemento */
+    height: 325px; /* Altura del elemento */
+  }
+
+  /* 05 · PROYECTOS */
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Número y tamaño de columnas */
+  }
+
+  /* 10 · GALERÍA Y VISOR */
+  .detail-images-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Número y tamaño de columnas */
+  }
+
+}
+
+/* Pantallas: (max-width: 1000px) */
+@media (max-width: 1000px) {
+  /* 06 · TECNOLOGÍAS */
+  .technologies-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Número y tamaño de columnas */
+  }
+
+  /* 10 · GALERÍA Y VISOR */
+  .detail-images-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Número y tamaño de columnas */
+  }
+
+}
+
+/* Pantallas: (max-width: 900px) */
+@media (max-width: 900px) {
+  /* 02 · NAVEGACIÓN */
+  .navbar {
+    height: 75px; /* Altura del elemento */
+    padding: 0 6%; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+  .menu-toggle {
+    display: flex; /* Modo de distribución del elemento */
+    flex-direction: column; /* Dirección de los elementos flexibles */
+    justify-content: center; /* Distribución en el eje principal */
+    gap: 5px; /* Separación entre elementos */
+    width: 42px; /* Anchura del elemento */
+    height: 42px; /* Altura del elemento */
+    padding: 8px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+    background: transparent; /* Color, imagen o degradado de fondo */
+    border: none; /* Borde del elemento */
+    cursor: pointer; /* Forma del cursor */
+    z-index: 102; /* Orden de superposición */
+  }
+
+  .menu-toggle span {
+    display: block; /* Modo de distribución del elemento */
+    width: 100%; /* Anchura del elemento */
+    height: 2px; /* Altura del elemento */
+    background: #352a47; /* Color, imagen o degradado de fondo */
+    border-radius: 3px; /* Redondeo de esquinas */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Suavidad y duración de cambios */
+  }
+
+  .menu-toggle.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg); /* Desplazamiento, giro o escala */
+  }
+
+  .menu-toggle.open span:nth-child(2) {
+    opacity: 0; /* Transparencia */
+  }
+
+  .menu-toggle.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg); /* Desplazamiento, giro o escala */
+  }
+
+  .navbar nav {
+    display: none; /* Modo de distribución del elemento */
+    position: absolute; /* Tipo de posicionamiento */
+    top: 75px; /* Distancia al borde superior */
+    left: 0; /* Distancia al borde izquierdo */
+    width: 100%; /* Anchura del elemento */
+    padding: 25px 6% 30px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+    background: rgba(255, 255, 255, 0.98); /* Color, imagen o degradado de fondo */
+    border-bottom: 1px solid #eee7fa; /* Borde inferior */
+    box-shadow: 0 15px 30px rgba(119, 83, 164, 0.08); /* Sombra del elemento */
+    flex-direction: column; /* Dirección de los elementos flexibles */
+    gap: 0; /* Separación entre elementos */
+  }
+
+  .navbar nav.nav-open {
+    display: flex; /* Modo de distribución del elemento */
+  }
+
+  .navbar nav a {
+    padding: 15px 10px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+    font-size: 16px; /* Tamaño de letra o símbolo */
+    border-bottom: 1px solid #f4edfa; /* Borde inferior */
+  }
+
+  .navbar nav a:last-child {
+    border-bottom: none; /* Borde inferior */
+  }
+
+  /* 03 · INICIO / PORTADA */
+  .hero {
+    flex-direction: column; /* Dirección de los elementos flexibles */
+    text-align: center; /* Alineación horizontal del texto */
+    padding: 150px 6% 70px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+  .hero-content {
+    text-align: center; /* Alineación horizontal del texto */
+  }
+
+  .hero-description {
+    margin-left: auto; /* Separación exterior izquierda */
+    margin-right: auto; /* Separación exterior derecha */
+  }
+
+  .hero-buttons {
+    justify-content: center; /* Distribución en el eje principal */
+  }
+
+  /* 04 · SOBRE MÍ */
+  .about {
+    padding: 80px 6%; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+  .about-content {
+    grid-template-columns: 1fr; /* Número y tamaño de columnas */
+    gap: 35px; /* Separación entre elementos */
+  }
+
+  .about-text h3 {
+    font-size: 26px; /* Tamaño de letra o símbolo */
+  }
+
+}
+
+/* Pantallas: (max-width: 700px) */
+@media (max-width: 700px) {
+  /* 05 · PROYECTOS */
+  .projects, .technologies {
+    padding: 75px 6%; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+  .projects-grid, .technologies-grid {
+    grid-template-columns: 1fr; /* Número y tamaño de columnas */
+  }
+
+  .project-filters {
+    gap: 8px; /* Separación entre elementos */
+    margin-bottom: 35px; /* Separación exterior inferior */
+  }
+
+  .filter-button {
+    padding: 10px 16px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+    font-size: 12px; /* Tamaño de letra o símbolo */
+  }
+
+  .project-image {
+    height: 100px; /* Altura del elemento */
+  }
+
+  .project-info {
+    padding: 24px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+  .projects {
+    padding-top: 70px; /* Espacio interior superior */
+    padding-bottom: 75px; /* Espacio interior inferior */
+  }
+
+  .projects .section-heading {
+    margin-bottom: 35px; /* Separación exterior inferior */
+  }
+
+  .project-icon {
+    font-size: 44px; /* Tamaño de letra o símbolo */
+  }
+
+  /* 06 · TECNOLOGÍAS */
+  .technology-card {
+    padding: 10px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+  .technologies {
+    padding-top: 65px; /* Espacio interior superior */
+    padding-bottom: 65px; /* Espacio interior inferior */
+  }
+
+  /* 07 · CONTACTO */
+  .contact {
+    padding: 45px 6%; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+  .contact-description {
+    font-size: 15px; /* Tamaño de letra o símbolo */
+  }
+
+  /* 08 · PIE DE PÁGINA */
+  .footer {
+    flex-direction: column; /* Dirección de los elementos flexibles */
+    text-align: center; /* Alineación horizontal del texto */
+    padding: 25px 6%; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+  /* 09 · DETALLE DE PROYECTOS */
+  .project-detail {
+    padding: 115px 6% 65px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+  .detail-back {
+    margin-bottom: 30px; /* Separación exterior inferior */
+  }
+
+  .detail-header h1 {
+    font-size: 36px; /* Tamaño de letra o símbolo */
+  }
+
+  .detail-intro {
+    font-size: 15px; /* Tamaño de letra o símbolo */
+  }
+
+  .detail-gallery {
+    min-height: 220px; /* Altura mínima del elemento */
+  }
+
+  .detail-gallery-icon {
+    font-size: 65px; /* Tamaño de letra o símbolo */
+  }
+
+  .detail-summary-grid, .detail-features-grid {
+    grid-template-columns: 1fr; /* Número y tamaño de columnas */
+  }
+
+  .detail-summary-grid, .detail-section {
+    margin-bottom: 60px; /* Separación exterior inferior */
+  }
+
+  .detail-summary-card {
+    padding: 28px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+  .detail-feature-card {
+    padding: 20px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+  .detail-tech-card {
+    padding: 25px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+    gap: 10px; /* Separación entre elementos */
+  }
+
+  .detail-tech-card span {
+    padding: 10px 15px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+    font-size: 12px; /* Tamaño de letra o símbolo */
+  }
+
+  /* 10 · GALERÍA Y VISOR */
+  .detail-images-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Número y tamaño de columnas */
+    gap: 12px; /* Separación entre elementos */
+  }
+
+  .detail-image-card {
+    padding: 10px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+    border-radius: 14px; /* Redondeo de esquinas */
+  }
+
+  .detail-image-wrapper {
+    height: 210px; /* Altura del elemento */
+  }
+
+  .detail-image-info h3 {
+    font-size: 12px; /* Tamaño de letra o símbolo */
+  }
+
+}
+
+/* Pantallas: (max-width: 600px) */
+@media (max-width: 600px) {
+  /* 01 · BASE Y ESTILOS COMPARTIDOS */
+  .section-heading {
+    margin-bottom: 40px; /* Separación exterior inferior */
+  }
+
+  .btn-primary, .btn-secondary {
+    padding: 13px 18px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+    font-size: 13px; /* Tamaño de letra o símbolo */
+  }
+
+  /* 03 · INICIO / PORTADA */
+  .hero {
+    min-height: auto; /* Altura mínima del elemento */
+    padding: 125px 7% 75px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+    justify-content: flex-start; /* Distribución en el eje principal */
+    gap: 0; /* Separación entre elementos */
+  }
+
+  .hero-visual {
+    display: none; /* Modo de distribución del elemento */
+  }
+
+  .hero-content {
+    width: 100%; /* Anchura del elemento */
+    max-width: 100%; /* Anchura máxima */
+    text-align: center; /* Alineación horizontal del texto */
+  }
+
+  .hero-label {
+    font-size: 10px; /* Tamaño de letra o símbolo */
+    letter-spacing: 2px; /* Separación entre letras */
+    margin-bottom: 20px; /* Separación exterior inferior */
+  }
+
+  .hero h1 {
+    font-size: clamp(38px, 10vw, 52px); /* Tamaño de letra o símbolo */
+    margin-bottom: 20px; /* Separación exterior inferior */
+  }
+
+  .hero h2 {
+    font-size: 22px; /* Tamaño de letra o símbolo */
+    margin-bottom: 20px; /* Separación exterior inferior */
+  }
+
+  .hero-description {
+    font-size: 14px; /* Tamaño de letra o símbolo */
+    line-height: 1.8; /* Altura de línea del texto */
+  }
+
+  .hero-buttons {
+    justify-content: center; /* Distribución en el eje principal */
+    flex-wrap: wrap; /* Permite pasar elementos a otra fila */
+    gap: 12px; /* Separación entre elementos */
+    margin-top: 30px; /* Separación exterior superior */
+  }
+
+  /* 04 · SOBRE MÍ */
+  .about {
+    padding: 65px 6%; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+  .about-card {
+    padding: 22px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+}
+
+/* Pantallas: (prefers-reduced-motion: reduce) */
+@media (prefers-reduced-motion: reduce) {
+  /* 03 · INICIO / PORTADA */
+  .creative-core {
+    animation: none; /* Animación aplicada */
+  }
+
+  .creative-scene, .floating-label, .menu-toggle span,
+  .project-card, .project-icon, .filter-button,
+  .technology-card, .technology-tags span, .contact-social {
+    transition: none; /* Suavidad y duración de cambios */
+  }
+
+  /* 09 · DETALLE DE PROYECTOS */
+  .detail-feature-card {
+    transition: none; /* Suavidad y duración de cambios */
+  }
+
+}
+
+/* Pantallas: (max-width: 750px) */
+@media (max-width: 750px) {
+  /* 10 · GALERÍA Y VISOR */
+  .detail-images-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Número y tamaño de columnas */
+    gap: 12px; /* Separación entre elementos */
+  }
+
+  .detail-image-card {
+    padding: 10px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+    border-radius: 14px; /* Redondeo de esquinas */
+  }
+
+  .detail-image-wrapper {
+    height: 220px; /* Altura del elemento */
+    border-radius: 10px; /* Redondeo de esquinas */
+  }
+
+  .detail-image-info {
+    padding-top: 10px; /* Espacio interior superior */
+  }
+
+  .detail-image-info h3 {
+    font-size: 12px; /* Tamaño de letra o símbolo */
+  }
+
+  .detail-lightbox {
+    padding: 60px 48px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
+  }
+
+  .detail-lightbox-arrow {
+    width: 34px; /* Anchura del elemento */
+    height: 34px; /* Altura del elemento */
+    font-size: 27px; /* Tamaño de letra o símbolo */
+  }
+
+  .detail-lightbox-arrow.previous {
+    left: 6px; /* Distancia al borde izquierdo */
+  }
+
+  .detail-lightbox-arrow.next {
+    right: 6px; /* Distancia al borde derecho */
+  }
+
+}
+
+/* Pantallas: (max-width: 420px) */
+@media (max-width: 420px) {
+  /* 10 · GALERÍA Y VISOR */
+  .detail-image-wrapper {
+    height: 175px; /* Altura del elemento */
+  }
+
+}
+
+/* ==================================================================== */
+/* 14 · AJUSTES RESPONSIVE DE COMPONENTES DE DETALLE */
+/* ==================================================================== */
+
+@media (max-width: 768px) {
+  .detail-practice-card {
+    grid-template-columns: 1fr; /* Texto y vídeo apilados */
+    gap: 24px;
+    padding: 22px;
+  }
+}
+
+@media (max-width: 700px) {
+  .detail-summary-card {
+    padding: 24px;
+  }
+
+  .detail-summary-heading {
+    gap: 12px;
+  }
+
+  .detail-summary-heading h2 {
+    font-size: 20px;
+  }
+
+  .detail-technologies-list,
+  .detail-tech-card {
+    gap: 8px;
+  }
+
+  .detail-technologies-list span,
+  .detail-tech-card span {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .detail-practice-content .practice-heading-inline span,
+  .detail-practice-content .practice-heading-inline h3 {
+    font-size: 17px;
+  }
+}

@@ -1,0 +1,202 @@
+.seccion {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.titulo_seccion { /*Con este div creamos el elemento titulo para cada seccion de articulos*/
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.titulo_seccion::after { /*Con este elemento creamos la barra separadora, para dividir las distintas secciones*/
+    content: "";
+    height: 1px;
+    flex-grow: 1;
+    background-color: rgb(0, 100, 107);
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+.group { /*Con este estamos dando el estilo cuadriculado a una seccion agrupacion de articulos*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 20%));
+    gap: 30px 30px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.articulo { /*Le damos estilo a cada articulo, con imagen y texto*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+}
+
+.imagenes {
+    width: 350px;
+    border-radius: 8px;
+}
+
+/*Para cada uno de los titulos de las noticias*/
+.noticia {
+    text-decoration: none;
+    color: #1c2324;
+    font-size: large;
+    text-align: center;
+    transition: font-size 0.1s ease-in;  /*Genero una transicion, el estilo no cambia de golpe*/
+    transition: color 0.1 ease-in;
+}
+
+.noticia:hover { /*Cuando el raton pasa por encima del titulo*/
+    text-decoration: none;
+    color: rgb(0, 100, 107);
+    font-size: larger;
+}
+
+.boton {
+    text-align: center;
+}
+
+#boton {
+    border: none;
+    background-color: rgb(0, 100, 107);
+    border-radius: 90px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+#boton:hover {
+    border: none;
+    background-color: white;
+    border-radius: 90px;
+    color: rgb(0, 100, 107);
+    font-weight:bolder;
+}
+
+.imagenes {
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/*EN ESTA SECCION SE DEFINE EL JUEGO CON EVENTO DE ARRASTRE*/
+/*Estilo de la seccion del juego. Está contenido en una caja de color blanco*/
+#explicacion {
+    margin: 4% 7% 0 7%;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/*Definimos la disposicion de los elementos del juego, así como el fondo*/
+.juego {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px 30px 20px 30px;
+    margin: 5% 7% 5% 7%;
+    row-gap: 50px;
+
+}
+
+/*Definimos la agrupacion de elementos de arrastre y les damos estilo flexbox*/
+.arrastre-elem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 30px;
+
+}
+
+/*Le damos estilo a las imagenes que serán nuestros elementos de arrastre*/
+/*Para que al pasar el raton por un elemento de arrastre cambie su forma*/
+.arrastre {
+    height: 70px;
+    width: 70px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    padding: 5px 5px 5px 5px;
+    cursor: move;
+    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+/*Cuando el raton esta encima de algun elemento con esta clase, su opacidad es menor y cambia el color del fondo*/
+.arrastre:hover {
+    opacity: 80%;
+    background-color: white;
+}
+
+.arrastre.arrastrado {
+    user-select: none;
+    opacity: 0.2;
+    cursor: default;
+}
+
+.arrastre.arrastrado:hover {
+    opacity: 0.2;
+}
+
+/*Definimos el estilo del apartado de las definiciones, en donde vamos a tener que soltar nuestros elementos de arrastre*/
+.soltar-elem {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Definimos el estilo de cada elemento en donde podemos soltar nuestros materiales*/
+.soltar {
+    margin: 7px 10px 7px 10px;
+    padding: 15px 10px 15px 10px;
+    height: 60px;
+    background-color: #f4f4f4;
+    color: rgb(0, 100, 107);
+    border-radius: 8px;
+    transition: transform 0.1s ease-in-out; 
+}
+
+/*Este estilo se aplica a un elemento de clase hover si hay algun elemento de clase arrastre encima suyo*/
+.soltar.soltar-hover {
+    transform: scale(1.01); /*Aumenta su tamaño*/
+    background-color: rgb(0, 100, 107); /*Cambia el color de fondo*/
+    color: #f4f4f4; /*Cambia el color del texto*/
+}
+
+/*Cuando las imagenes del juego ya se han colocado en su definicion, se aplica este estilo en la definicion para indicar que era la opcion correcta*/
+.soltar.soltado {
+    background-color: rgb(0, 100, 107);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f4f4f4;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/*Para el boton de reinicio que aparece en pantalla cuando se ha finalizado el juego*/
+#boton-reinicio {
+    position: absolute;
+    align-self: center;
+    top: 45%;
+    text-align: center;
+    border: none;
+    background-color: rgb(0, 100, 107);
+    border-radius: 90px;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px 10px 20px;
+    transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out;
+}
+
+/*Para que, como el resto de botones de nuestras páginas, el boton de reinicio cambie de color al pasar el raton sobre el*/
+#boton-reinicio:hover {
+    border: none;
+    background-color: white;
+    border-radius: 90px;
+    color: rgb(0, 100, 107);
+    font-weight:bolder;
+}

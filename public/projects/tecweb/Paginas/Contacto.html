@@ -1,0 +1,166 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../CSS/CSS_contacto.css">
+    <link rel="stylesheet" href="../CSS/CSS_header.css">
+    <script src="../JS/JS_1.js" defer></script>
+    <script src="../JS/JS_2.js" defer></script>
+
+    
+</head>
+<body>
+    <header>
+        <div id="main-header">
+            <div><button id="boton-header" class="nav-btn">&#9654;</button></div>
+            <div id="texto-header"><b>CONTACTO</b></div>
+            <div><a href="Pagina Principal.html"><img src="../Fotos/logo.png" alt="logo" class="logo" id="logo-header"></a></div>
+        </div>
+    </header> 
+
+    <aside>
+    <div class="menu-lateral">
+        <button id="close-btn">&#10006;</button>
+
+        <img src="../Fotos/logo_alt.png" alt="Logo" class="logo">
+
+        <nav>
+            <ul  class="list">
+            <li><a href="Pagina Principal.html" class="enlaces">Inicio</a></li>
+            <li><a href="Presentacion Casas Sostenibles.html" class="enlaces">Casas Sostenibles</a></li>
+            <li><a href="Presentacion Casas Economicas.html" class="enlaces">Casas Económicas</a></li>
+            <li><a href="Galeria.html" class="enlaces">Galería</a></li>
+            <li><a href="blog.html" class="enlaces">Blog</a></li>
+            </ul>
+        </nav>
+    </div>
+    </aside>
+
+    <form action="javascript:void(0);" method="post" enctype="text/plain" onsubmit="enviarFormulario()">
+        <!-- La expresión javascript:void(0); en el atributo action es una convención que se utiliza cuando
+             no deseas que el formulario realice una acción de envío convencional (es decir, cuando no quieres
+             que el formulario redireccione a una nueva página o recargue la actual). En lugar de eso, estás
+              indicando que deseas ejecutar una instrucción JavaScript, que en este caso es void(0). 
+              La función void en JavaScript retorna undefined, y void(0) se usa comúnmente como una forma de
+             ejecutar JavaScript sin cambiar la página actual.-->
+             
+        <!-- Campo 1: Nombre type:text -->
+        <div class="form-input">
+            <input type="text" id="nombre" name="nombre" required>
+            <label for="nombre">Introduzca su nombre</label>
+        </div>
+
+        <!-- Campo 2: Apellidos type:text -->
+        <div class="form-input">
+            <input type="text" id="apellidos" name="apellidos" required>
+            <label for="nombre">Introduzca sus apellidos</label>
+        </div>
+
+        <!-- Campo 3: email type:email -->
+        <div class="form-input">
+            <input type="email" id="mail" name="mail" required>
+            <label for="nombre">Introduzca su email</label>
+        </div>
+
+        <!-- Campo 4: telefono type:tel -->
+        <div class="form-input">
+            <input type="tel" id="phone" name="phone" required>
+            <label for="nombre">Introduzca su teléfono</label>
+        </div>
+
+        <!-- Campo 5: mensaje textarea -->
+        <div class="form-mensaje">
+            <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+            <label for="nombre">Introduzca su mensaje</label>
+        </div>
+
+        <!-- Campo 6: ciudad type:list -->
+        <div id="data">
+        <input list="ciudades" name="ciudad" id="ciudad" required>
+        <label for="ciudad">Ciudad</label> 
+        <datalist id="ciudades">
+            <option value="Alicante">
+            <option value="Barcelona">
+            <option value="Cáceres">
+            <option value="Gerona">
+            <option value="Guadalajara">
+            <option value="Huelva">
+            <option value="Jaén">
+            <option value="La Coruña">
+            <option value="Lugo">
+            <option value="Madrid">
+            <option value="Navarra">
+            <option value="Palencia">
+            <option value="Teruel">
+        </datalist>
+        </div>
+  
+        <!-- Campo 7: Tipo de consulta (Radio buttons) -->
+        <div id="select">
+        <label style="color: rgb(0, 100, 107);">Tipo de consulta: </label>
+        <div class="radios">
+            <input type="radio" id="compra" name="tipo_consulta" value="compra" required>
+            <label for="compra">Compra</label>
+        </div>
+        <div class="radios">
+            <input type="radio" id="venta" name="tipo_consulta" value="venta" required>
+            <label for="venta">Venta</label>
+        </div>
+        <div class="radios">
+            <input type="radio" id="alquiler" name="tipo_consulta" value="alquiler" required>
+            <label for="alquiler">Alquiler</label><br>
+        </div>
+        </div>
+
+        <!-- Campo 8: Acepto los términos y condiciones (Checkbox) -->
+        <div id="conds">
+            <input type="checkbox" id="terms" name="Terminos_y_condiciones" value="terminos" required>
+            <label for="terms">He leído la política de privacidad y acepto los términos y condiciones</label>
+        </div>
+
+        <div class="form-enviar">
+            <input type="submit" value="Enviar" id="boton">
+        </div>
+
+
+        <div id="resultados"></div>
+
+    </form>
+
+    <footer id="footer">
+        <div id="izq"><img src="../Fotos/logob.png" alt="Logo basico"></div>
+        
+        
+            <div class= "superior">
+                <div>
+                    <h3>Servicios</h3>
+                    <a href="">Ayuda Online</a>
+                    <a href="../Paginas/Contacto.html">Contacto</a>
+                    <a href="">Consultas</a>
+                    <a href="">Programas</a>
+                </div>
+                <div>
+                    <h3>JAVY'S</h3>
+                    <a href="">Quiénes somos</a>
+                    <a href="">Compromiso</a>
+                    <a href="">Publicidad</a>
+                </div>
+            </div>
+
+            <div class= "inferior">
+                <div class="links">
+                    <a href=""><img class="iconos" src="../Fotos/iconos_f/insta.png" alt="Instagram"></a>
+                    <a href=""><img class="iconos" src="../Fotos/iconos_f/twitter.png" alt="Twitter"></a>
+                    <a href=""><img class="iconos" src="../Fotos/iconos_f/facebook.png" alt="Facebook"></a>
+                    <a href=""><img class="iconos" src="../Fotos/iconos_f/Tiktok.png" alt="Tiktok"></a>
+                    <a href=""><img class="iconos" src="../Fotos/iconos_f/youtube.png" alt="Youtube"></a>
+                </div>
+                <div class="legal">
+                    <span><p><img style="height: 14px; width: 14px;" src="../Fotos/iconos_f/Copy.png" alt="Copyright"> El contenido de esta página web está protegido por copyright</p></span>
+                </div>
+            </div>
+
+        
+    </footer>
+</body>
+</html>
