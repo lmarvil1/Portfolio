@@ -81,7 +81,7 @@
   display: flex; /* Modo de distribución del elemento */
   align-items: center; /* Alineación en el eje transversal */
   justify-content: space-between; /* Distribución en el eje principal */
-  background: rgba(255, 255, 255, 0.75); /* Color, imagen o degradado de fondo */
+  background: #ffffff;/* Color, imagen o degradado de fondo */
   backdrop-filter: blur(15px); /* Desenfoque del fondo tras el elemento */
   position: fixed; /* Tipo de posicionamiento */
   top: 0; /* Distancia al borde superior */
@@ -1622,31 +1622,39 @@
   }
 
   .navbar nav {
-    display: none; /* Modo de distribución del elemento */
-    position: absolute; /* Tipo de posicionamiento */
-    top: 75px; /* Distancia al borde superior */
-    left: 0; /* Distancia al borde izquierdo */
-    width: 100%; /* Anchura del elemento */
-    padding: 25px 6% 30px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
-    background: rgba(255, 255, 255, 0.98); /* Color, imagen o degradado de fondo */
-    border-bottom: 1px solid #eee7fa; /* Borde inferior */
-    box-shadow: 0 15px 30px rgba(119, 83, 164, 0.08); /* Sombra del elemento */
-    flex-direction: column; /* Dirección de los elementos flexibles */
-    gap: 0; /* Separación entre elementos */
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px 6% 20px;
+    background: #ffffff;
+    border-bottom: 1px solid #eee7fa;
+    box-shadow: 0 15px 30px rgba(119, 83, 164, 0.1);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: calc(100dvh - 75px);
+    overflow-y: auto;
   }
 
   .navbar nav.nav-open {
-    display: flex; /* Modo de distribución del elemento */
+    display: flex;
   }
 
   .navbar nav a {
-    padding: 15px 10px; /* Espacio interior (arriba, derecha, abajo, izquierda) */
-    font-size: 16px; /* Tamaño de letra o símbolo */
-    border-bottom: 1px solid #f4edfa; /* Borde inferior */
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 12px;
+    font-size: 15px;
+    text-align: center;
+    border-bottom: 1px solid #f4edfa;
   }
 
   .navbar nav a:last-child {
-    border-bottom: none; /* Borde inferior */
+    border-bottom: none;
   }
 
   /* 03 · INICIO / PORTADA */

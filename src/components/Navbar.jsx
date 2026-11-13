@@ -41,7 +41,7 @@ function Navbar() {
 
       <nav
         id="main-navigation"
-        className={menuOpen ? 'nav-open' : ''}
+        className={`nav-links ${menuOpen ? 'nav-open' : ''}`}
         aria-label="Navegación principal"
       >
         {links.map((link) => (
