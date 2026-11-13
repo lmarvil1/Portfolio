@@ -1,4 +1,6 @@
 
+import { CodeXml, Palette, Globe2 } from 'lucide-react'
+
 function About() {
   return (
     <section className="about" id="sobre-mi">
@@ -46,7 +48,9 @@ function About() {
 
           <div className="about-cards">
             <div className="about-card">
-              <span className="about-card-icon">{"</>"}</span>
+              <span className="about-card-icon">
+                <CodeXml size={28} strokeWidth={1.8} />
+              </span>
               <h4>Desarrollo</h4>
               <p>
                 Aplicaciones web y móviles,
@@ -55,7 +59,9 @@ function About() {
             </div>
 
             <div className="about-card">
-              <span className="about-card-icon">✦</span>
+              <span className="about-card-icon">
+                <Palette size={28} strokeWidth={1.8} />
+              </span>
               <h4>Multimedia</h4>
               <p>
                 Diseño digital, animación,
@@ -64,7 +70,9 @@ function About() {
             </div>
 
             <div className="about-card">
-              <span className="about-card-icon">◎</span>
+              <span className="about-card-icon">
+                <Globe2 size={28} strokeWidth={1.8} />
+              </span>
               <h4>Experiencia internacional</h4>
               <p>
                 Erasmus+ en el Politecnico di Milano,

@@ -420,7 +420,7 @@
 }
 
 .about-card-icon {
-  display: inline-flex; /* Modo de distribución del elemento */
+  display: flex; /* Modo de distribución del elemento */
   align-items: center; /* Alineación en el eje transversal */
   justify-content: center; /* Distribución en el eje principal */
   width: 36px; /* Anchura del elemento */
