@@ -475,4 +475,54 @@ export const projects = [
 },
 
 
+{
+  id: 9,
+  slug: 'filtermaster',
+  title: 'FilterMaster',
+  category: 'software',
+  type: 'Proyecto académico · Imagen y Vídeo Digital',
+
+  description:
+    'Aplicación web de visión artificial que combina filtros interactivos, reconocimiento facial, detección de emociones y gestos y procesamiento de vídeo en tiempo real.',
+
+  objective:
+    'Desarrollar una aplicación web interactiva que integre diferentes técnicas de visión artificial y aprendizaje automático para reconocer rostros, emociones y gestos, y aplicar efectos visuales sobre el vídeo capturado por la cámara.',
+
+  about:
+    'Proyecto académico desarrollado en equipo para la asignatura Imagen y Vídeo Digital. FilterMaster integra diferentes filtros interactivos en una aplicación web creada con Python y Flask. Mediante el uso de OpenCV, MediaPipe, DeepFace y TensorFlow, permite analizar imágenes de la cámara en tiempo real, reconocer personas, detectar expresiones y gestos, dibujar sobre el vídeo y sustituir fondos. Además, se entrenaron y compararon tres modelos de reconocimiento facial: EigenFaces, FisherFaces y LBPH.',
+
+  features: [
+    'Detección de emociones faciales con DeepFace',
+    'Reconocimiento de gestos y efectos visuales',
+    'Identificación de personas mediante reconocimiento facial',
+    'Entrenamiento de modelos EigenFaces, FisherFaces y LBPH',
+    'Dibujo en tiempo real mediante seguimiento de color',
+    'Sustitución de fondos mediante segmentación',
+    'Juego interactivo de preferencias de comida',
+    'Aplicación de filtros gráficos sobre el rostro',
+  ],
+
+  technologies: [
+    'Python',
+    'Flask',
+    'OpenCV',
+    'MediaPipe',
+    'DeepFace',
+    'TensorFlow',
+    'NumPy',
+    'HTML',
+    'JavaScript',
+  ],
+
+  images: [
+  {
+    src: '/projects/filtermaster/filtermaster.png',
+    title: 'Interfaz de FilterMaster',
+    alt: 'Aplicación web FilterMaster con cámara y selección de filtros interactivos',
+  },
+],
+
+  icon: 'scan-face',
+},
+
 ]

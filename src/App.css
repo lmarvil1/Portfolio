@@ -2010,3 +2010,28 @@
     font-size: 17px;
   }
 }
+
+/* Galería de FilterMaster */
+
+.filtermaster-gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.filtermaster-gallery .detail-image-card {
+  width: 100%;
+  max-width: 340px;
+}
+
+.filtermaster-gallery .detail-image-wrapper {
+  height: auto;
+  aspect-ratio: auto;
+  background: transparent;
+}
+
+.filtermaster-gallery .detail-image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}

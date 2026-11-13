@@ -1,8 +1,9 @@
+import { Code2, Palette, Settings } from 'lucide-react'
 
 const categories = [
   {
     title: 'Desarrollo',
-    icon: '⌘',
+    icon: Code2,
     technologies: [
       'Flutter',
       'Dart',
@@ -13,6 +14,10 @@ const categories = [
       'React',
       'HTML',
       'CSS',
+      'Flask',
+      'OpenCV',
+      'MediaPipe',
+      'TensorFlow',
       'Android SDK',
       'APIs REST',
       'Google Drive API',
@@ -21,7 +26,7 @@ const categories = [
   },
   {
     title: 'Multimedia y diseño',
-    icon: '✦',
+    icon: Palette,
     technologies: [
       'Blender',
       'Edición de vídeo',
@@ -33,7 +38,7 @@ const categories = [
   },
   {
     title: 'Herramientas',
-    icon: '⚙',
+    icon: Settings,
     technologies: [
       'Git',
       'GitHub',
@@ -46,6 +51,7 @@ const categories = [
     ],
   },
 ]
+
 
 
 function Technologies() {
@@ -69,7 +75,7 @@ function Technologies() {
               key={category.title}
             >
               <div className="technology-icon">
-                {category.icon}
+                <category.icon size={28} strokeWidth={1.8} />
               </div>
 
               <h3>{category.title}</h3>

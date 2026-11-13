@@ -169,7 +169,11 @@ function ProjectDetail() {
               <p className="section-label">GALERÍA</p>
             </div>
 
-            <div className="detail-images-grid">
+            <div
+              className={`detail-images-grid ${
+                slug === 'filtermaster' ? 'filtermaster-gallery' : ''
+              }`}
+            >
               {images.map((image, index) => (
                 <button
                   key={image.src}
@@ -237,6 +241,7 @@ function ProjectDetail() {
         {/* MARCADOR PARA OTROS PROYECTOS */}
 
         {!isAudiovisual &&
+          slug !== 'filtermaster' &&
           !project.website &&
           images.length === 0 &&
           pendingImages.length === 0 && (

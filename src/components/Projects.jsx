@@ -9,6 +9,7 @@ import {
   House,
   Activity,
   Cat,
+  ScanFace,
 } from 'lucide-react'
 
 const projectSummaries = {
@@ -26,6 +27,8 @@ const projectSummaries = {
     'Aplicación para analizar saltos verticales mediante sensores, visualizar resultados y comparar clasificaciones.',
   javacat:
     'Aplicación Android para cuidar de un gato virtual y disfrutar de tres minijuegos interactivos.',
+  filtermaster:
+    'Filtros interactivos, reconocimiento facial y detección de emociones y gestos mediante visión artificial.',
   }
 
 const projectTypes = {
@@ -36,6 +39,7 @@ const projectTypes = {
   tecweb: 'PROYECTO ACADÉMICO',
   saltaroo: 'PROYECTO ACADÉMICO',
   javacat: 'PROYECTO ACADÉMICO',
+  filtermaster: 'PROYECTO ACADÉMICO',
 }
 
 const projectIcons = {
@@ -46,6 +50,7 @@ const projectIcons = {
   house: House,
   activity: Activity,
   cat: Cat,
+  'scan-face': ScanFace,
 }
 
 function Projects() {
