@@ -2035,3 +2035,25 @@
   object-fit: contain;
   display: block;
 }
+
+/* ================================================= */
+/* 15 · ANCHO COMPLETO DE LA WEB */
+/* ================================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: none;
+}
+
+.portfolio {
+  width: 100%;
+  max-width: none;
+}
